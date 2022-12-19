@@ -1,0 +1,10 @@
+.TodosLoading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.loading-icon {
+  color: rgb(68, 61, 104);
+}

@@ -1,0 +1,10 @@
+.TodoList {
+  height: 400px;
+  border-radius: 8px;
+  overflow: auto;
+}
+
+.TodoList>ul {
+  margin: 0;
+  padding: 10px;
+}

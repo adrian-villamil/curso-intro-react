@@ -1,0 +1,13 @@
+.EmptyTodos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  color: rgb(68, 61, 104);
+}
+
+.empty-text {
+  font-size: 1.5em;
+}
+
