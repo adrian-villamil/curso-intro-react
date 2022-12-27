@@ -12,3 +12,7 @@
   border: 2px solid gray;
   outline: none;
 }
+
+.TodoSearch:disabled {
+  opacity: 0.25;
+}

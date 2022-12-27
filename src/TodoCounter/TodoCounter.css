@@ -1,3 +1,7 @@
 .TodoCounter {
   text-align: center;
 }
+
+.TodoCounter-loading {
+  opacity: 0.25;
+}
