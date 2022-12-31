@@ -15,21 +15,26 @@ import React from 'react';
 import { ChangeAlert } from '../ChangeAlert';
 
 function App() {
+  const { states, statesUpdaters } = useTodos();
+
   const {
-    error,
     loading,
-    searchedTodos,
-    completeTodo,
-    deleteTodo,
-    openModal,
-    setOpenModal,
+    error,
     totalTodos,
     completedTodos,
     searchValue,
+    searchedTodos,
+    openModal,
+  } = states;
+
+  const {
     setSearchValue,
     addTodo,
+    completeTodo,
+    deleteTodo,
+    setOpenModal,
     sincronizeTodos
-  } = useTodos();
+  } = statesUpdaters;
 
   return (
     <div className='App'>
@@ -54,15 +59,15 @@ function App() {
         onLoading={() => <TodosLoading />}
         onEmptyTodos={() => <EmptyTodos />}
         onEmptySearchResults={(searchText) => <p>No hay resultados para {searchText}</p>}
-        // render={todo => (
-        //   <TodoItem
-        //     key={todo.text}
-        //     text={todo.text}
-        //     completed={todo.completed}
-        //     onComplete={() => completeTodo(todo.text)}
-        //     onDelete={() => deleteTodo(todo.text)}
-        //   />
-        // )}
+      // render={todo => (
+      //   <TodoItem
+      //     key={todo.text}
+      //     text={todo.text}
+      //     completed={todo.completed}
+      //     onComplete={() => completeTodo(todo.text)}
+      //     onDelete={() => deleteTodo(todo.text)}
+      //   />
+      // )}
       >
         {todo => (
           <TodoItem
